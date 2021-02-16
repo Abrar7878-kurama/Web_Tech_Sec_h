@@ -15,5 +15,22 @@
 </body>
 </html>
 
-<?php if(isset($_POST['myname'])){ echo $_POST['myname']; }
-else{echo "wrong submission";}?> 
+<?php
+	
+	if(isset($_POST['submit']))
+	{
+		$email = $_POST['myemail'];
+
+		if($email == "")
+		{
+			echo "Invalid request!!!";
+		}
+		else
+		{
+			echo "successful!!!"; 
+			echo "<br>";
+			echo $email;
+		}
+	}
+	
+?>
